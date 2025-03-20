@@ -1,0 +1,348 @@
+
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: large;
+  font-weight: bold;
+  /* text-transform: uppercase; */
+}
+
+
+nav{
+  background-color: #3b3a3a;
+  color: white;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 25% 65%;
+      grid-template-columns: 25% 65%;
+  -webkit-column-gap: 5%;
+          column-gap: 5%;
+  padding: 0% 5%;
+}
+
+nav .array-inputs {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 60% 40%;
+      grid-template-columns: 60% 40%;
+  place-content: center;
+  padding: 5% 0%;
+}
+
+nav .array-inputs #a_size {
+  padding: 5% 0%;
+}
+
+nav .array-inputs #a_speed {
+  padding: 5% 0%;
+}
+
+nav .array-inputs #a_generate {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 5% 0% 5% 0%;
+  border-radius:20px;    /*addtional adding for border radius and bg color box shadow transition */
+  background-color: green;
+  box-shadow: -1px 1px 10px #000000;
+  transition: background-color 0.3s ease, transform 0.2s ease; 
+}
+
+nav .array-inputs #a_generate:hover { /* addtional adding  background-color transform*/
+  background-color: blue; /* Change background color on hover */
+  cursor: pointer;
+  transform: scale(1.05);
+}
+/*this part additional adding start*/
+nav .array-inputs #a_generate:active {
+  background-color: darkblue; /* Change background color on click */
+  transform: scale(0.95); /* Slightly shrink the button on click */
+}
+/*end */
+
+nav .header_right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+nav .header_right .nav-heading {
+  display: inline-block;
+  font-size: xxx-large;
+  padding: 3% 0%;
+}
+
+nav .header_right .algos {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(6, 16.66667%);
+  place-content: center;
+  padding: 2% 0%;
+}
+
+nav .header_right .algos button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  outline: none;
+  padding: 5% 1%;
+  font-size: x-large;
+  border-radius:20px; /*addtional adding for border radius and margin bg color box shadow*/
+  margin-left: 4px; 
+  background-color: green;
+  box-shadow: -1px 1px 10px #000000;
+}
+
+
+nav .header_right .algos button:hover {
+  background-color: blue;
+  cursor: pointer;
+}
+
+nav .header_right .algos .butt_locked {
+  background-color: transparent;
+  cursor: pointer;
+}
+
+nav .header_right .algos .butt_locked:hover {
+  background-color: transparent;
+  cursor: pointer;
+}
+
+nav .header_right .algos .butt_selected {
+  background-color: white;
+  color: green;
+}
+
+nav .header_right .algos .butt_selected:hover {
+  background-color: white;
+  cursor: pointer;
+}
+
+nav .header_right .algos .butt_unselected:hover {
+  background-color: blue;
+  cursor: pointer;
+}
+section {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns:20% 60% 20%;
+  grid-template-columns: 20% 60% 20%;
+}
+
+section .Complexity_Containers {
+  margin-top: 20%;
+}
+
+section .Complexity_Containers .Pair_Definitions {
+  margin-top: 20%;
+}
+
+section .Complexity_Containers .Pair_Definitions p {
+  display: inline;
+}
+
+section .Complexity_Containers .Pair_Definitions p.Sub_Heading {
+  font-size: medium;
+  text-transform: none;
+}
+
+section #Info_Cont1 {
+  padding: 20% 10%;
+}
+
+section #Info_Cont1 h3 {
+  text-decoration: underline;
+}
+section #array_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 70vh;
+  align-items: end; /*set top or bootom of animation*/
+
+}
+
+section #Info_Cont2 {
+  padding: 20% 10%;
+}
+
+section #Info_Cont2 h3 {
+  text-decoration: underline;
+}
+
+.hide {
+  display: none;
+}
+
+
+
+
+
+
+/* media tag */
+
+/* Mobile devices */
+@media (max-width: 480px) {
+  nav {
+    grid-template-columns: 1fr;
+    padding: 5%;
+  }
+  
+  nav .array-inputs {
+    grid-template-columns: 1fr;
+    padding: 10% 0;
+  }
+  
+  nav .header_right .nav-heading {
+    font-size: large;
+    padding: 5% 0;
+  }
+  
+  nav .header_right .algos {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 5% 0;
+  }
+  
+  nav .header_right .algos button {
+    font-size: medium;
+    margin-top: 12px;
+  }
+  
+  section {
+    grid-template-columns: 1fr;
+  }
+  
+  section .Complexity_Containers {
+    margin-top: 10%;
+  }
+  
+  section #Info_Cont1, section #Info_Cont2 {
+    padding: 10% 5%;
+  }
+}
+
+/* Tablet devices */
+@media (min-width: 481px) and (max-width: 1250px) {
+  nav {
+    grid-template-columns: 1fr;
+    padding: 5%;
+  }
+  
+  nav .array-inputs {
+    grid-template-columns: 1fr;
+    padding: 10% 0;
+  }
+  
+  nav .header_right .nav-heading {
+    font-size: xx-large;
+    padding: 5% 0;
+  }
+  
+  nav .header_right .algos {
+    grid-template-columns: repeat(4, 1fr);
+    padding: 5% 0;
+  }
+  
+  nav .header_right .algos button {
+    font-size: large;
+    margin-top: 12px;
+  }
+  
+  section {
+    grid-template-columns: 1fr;
+  }
+  
+  section .Complexity_Containers {
+    margin-top: 10%;
+  }
+  
+  section #Info_Cont1, section #Info_Cont2 {
+    padding: 10% 5%;
+  }
+}
+
+/* Laptop devices */
+@media (min-width: 1251px) and (max-width: 1920px) {
+  nav {
+    grid-template-columns: 30% 60%;
+    padding: 0% 5%;
+  }
+  
+  nav .array-inputs {
+    grid-template-columns: 60% 40%;
+    padding: 5% 0%;
+  }
+  
+  nav .header_right .nav-heading {
+    font-size: xxx-large;
+    padding: 3% 0%;
+  }
+  
+  nav .header_right .algos {
+    grid-template-columns: repeat(6, 19%);
+    padding: 2% 0%;
+  }
+  
+  nav .header_right .algos button {
+    font-size: x-large;
+  }
+  
+  section {
+    grid-template-columns: 20% 60% 20%;
+  }
+  
+  section .Complexity_Containers {
+    margin-top: 20%;
+  }
+  
+  section #Info_Cont1, section #Info_Cont2 {
+    padding: 20% 10%;
+  }
+}
+
+/* TV displays */
+@media (min-width: 1921px) {
+  nav {
+    grid-template-columns: 30% 60%;
+    padding: 0% 5%;
+  }
+  
+  nav .array-inputs {
+    grid-template-columns: 60% 40%;
+    padding: 5% 0%;
+  }
+  
+  nav .header_right .nav-heading {
+    font-size: 50px;
+    padding: 3% 0%;
+  }
+  
+  nav .header_right .algos {
+    grid-template-columns: repeat(6, 16.66667%);
+    padding: 2% 0%;
+  }
+  
+  nav .header_right .algos button {
+    font-size: 35px;
+  }
+  
+  section {
+    grid-template-columns: 20% 60% 20%;
+  }
+  
+  section .Complexity_Containers {
+    margin-top: 20%;
+  }
+  
+  section #Info_Cont1, section #Info_Cont2 {
+    padding: 20% 10%;
+  }
+}
