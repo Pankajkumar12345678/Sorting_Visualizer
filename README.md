@@ -50,9 +50,3 @@ Edit
 
 ---
 
-### ✅ **Key Improvements:**
-- Proper **Markdown formatting**
-- Syntax-highlighted **code blocks** for Git commands
-- Clear **sections** with proper headings and bullet points  
-
-Would you like to add anything else, such as deployment instructions or a live demo link? 😊
